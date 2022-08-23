@@ -2,14 +2,14 @@
 class Item < ApplicationRecord
   
   belongs_to :user
-  has_many :comments
-  has_one :order
   has_one_attached :image
   
   validates :image, presence: true
   validates :item, presence:true
   validates :text, presence:true
   validates :price, presence:true, numericality: {only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999}
+
+  #validates :user_id, presence:true
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category

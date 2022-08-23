@@ -34,32 +34,32 @@ RSpec.describe Item, type: :model do
       expect(@item.errors.full_messages).to include("Text can't be blank")
     end
     
-    it "カテゴリーの情報がなければ出品できない" do
-      @item.category_id = ""
+    it "カテゴリー選択欄で---が選択されている時は出品できない" do
+      @item.category_id = "1"
       @item.valid?
       expect(@item.errors.full_messages).to include("Category can't be blank")
     end
 
-    it "商品の状態の情報が無ければ出品できない" do
-      @item.status_id = ""
+    it "商品状態の選択欄で---が選択されている時は出品できない" do
+      @item.status_id = "1"
       @item.valid?
       expect(@item.errors.full_messages).to include("Status can't be blank")
     end
 
-    it "配送料の負担の情報が無ければ出品できない" do
-      @item.deliverycharge_id = ""
+    it "配送料の負担の選択欄で---が選択されている時は出品できない" do
+      @item.deliverycharge_id = "1"
       @item.valid?
       expect(@item.errors.full_messages).to include("Deliverycharge can't be blank")
     end
 
-    it "配送元の地域の情報が無ければ出品できない" do
-      @item.area_id = ""
+    it "配送元の地域選択欄で---が選択されている時は出品できない" do
+      @item.area_id = "0"
       @item.valid?
       expect(@item.errors.full_messages).to include("Area can't be blank")
     end
 
-    it "発送までの日数の情報が無ければ出品できない" do
-      @item.delivery_days_id = ""
+    it "配達日の選択欄で---が選択されている時は出品できない" do
+      @item.delivery_days_id = "1"
       @item.valid?
       expect(@item.errors.full_messages).to include("Delivery days can't be blank")
     end
@@ -88,6 +88,11 @@ RSpec.describe Item, type: :model do
       expect(@item.errors.full_messages).to include("Price is not a number")
     end
 
+    it "ユーザーが紐付いてなければ保存できない" do
+      @item.user = nil
+      @item.valid?
+      expect(@item.errors.full_messages).to include("User must exist")
     end
+  end
   end
 end
