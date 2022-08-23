@@ -227,3 +227,18 @@
 .inc {
   font-size: 13px;
 }
+
+
+#error_explanation ul {
+  margin: 0;
+  padding-left: 17px;
+  list-style: circle;
+  padding-left: 65px;
+}
+
+#error_explanation li {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #d65f4c;
+}
