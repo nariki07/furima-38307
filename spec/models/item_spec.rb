@@ -59,9 +59,9 @@ RSpec.describe Item, type: :model do
     end
 
     it "配達日の選択欄で---が選択されている時は出品できない" do
-      @item.delivery_days_id = "1"
+      @item.deliveryday_id = "1"
       @item.valid?
-      expect(@item.errors.full_messages).to include("Delivery days can't be blank")
+      expect(@item.errors.full_messages).to include("Deliveryday can't be blank")
     end
 
     it "販売価格の情報が無ければ出品できない" do
