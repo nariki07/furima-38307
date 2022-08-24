@@ -25,6 +25,6 @@ class Item < ApplicationRecord
   validates :area_id , numericality: { other_than: 0 , message: "can't be blank"}
   
   belongs_to :deliveryday
-  validates :delivery_days_id , numericality: { other_than: 1 , message: "can't be blank"}
+  validates :deliveryday_id , numericality: { other_than: 1 , message: "can't be blank"}
 
 end
