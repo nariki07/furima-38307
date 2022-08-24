@@ -245,14 +245,14 @@ a {
 }
 
 .item-lists>.list {
-  width: 37vh;
   padding: 1vw;
   background-color: #FFF;
+  display: flex;
 }
-
 
 .item-img-content {
   position: relative;
+  margin-right: 30px;
 }
 
 .item-img {
