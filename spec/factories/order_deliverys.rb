@@ -1,7 +1,6 @@
 FactoryBot.define do
 
   factory :order_delivery do
-
     token                 {"tok_abcdefghijk00000000000000000"}
     postcode              {"123-4567"} 
     area_id               {1}
