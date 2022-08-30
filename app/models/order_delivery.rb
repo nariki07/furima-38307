@@ -18,7 +18,7 @@ class OrderDelivery
   validates :phone_number, presence: true, format: { with: VALID_PHONE_REGEX }
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-    validates :area_id, numericality: { other_than: 0 , message: "can't be blank"}
+    validates :area_id, numericality: { other_than: 0 , message: "を入力してください"}
     
   def save
     order = Order.create(user_id: user_id, item_id: item_id)

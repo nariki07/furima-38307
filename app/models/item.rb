@@ -14,18 +14,18 @@ class Item < ApplicationRecord
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :category
-  validates :category_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :category_id, numericality: { other_than: 1 , message: "を入力してください"}
   
   belongs_to :status
-  validates :status_id, numericality: { other_than: 1 , message: "can't be blank"}
+  validates :status_id, numericality: { other_than: 1 , message: "を入力してください"}
 
   belongs_to :deliverycharge
-  validates :deliverycharge_id , numericality: { other_than: 1 , message: "can't be blank"}
+  validates :deliverycharge_id , numericality: { other_than: 1 , message: "を入力してください"}
 
   belongs_to :area
-  validates :area_id , numericality: { other_than: 0 , message: "can't be blank"}
+  validates :area_id , numericality: { other_than: 0 , message: "を入力してください"}
   
   belongs_to :deliveryday
-  validates :deliveryday_id , numericality: { other_than: 1 , message: "can't be blank"}
+  validates :deliveryday_id , numericality: { other_than: 1 , message: "を入力してください"}
 
 end
