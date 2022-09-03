@@ -3,6 +3,8 @@ ja:
     attributes:
       user:
         nickname: ニックネーム
+
+      identification:
         last_name: 名字
         first_name: 名前
         last_name_kana: 名字カナ

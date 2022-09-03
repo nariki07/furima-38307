@@ -69,6 +69,7 @@
 
 .form-info-header {
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .form-info-text {
@@ -124,7 +125,7 @@
 .form-bottom-text {
   font-size: 15px;
   margin-top: 10px;
-  text-align: center;
+  justify-content: center;
 }
 
 .form-bottom-text:last-child {
@@ -140,6 +141,7 @@
 .register-btn {
   width: 50%;
   margin: 0 auto;
+  margin-top: 30px;
 }
 
 .register-red-btn {
@@ -155,6 +157,6 @@
 .register-info {
   margin: 30px 180px 0 0;
   color: #0099e8;
-  text-align: right;
+  text-align: center;
   cursor: pointer;
 }
